@@ -1,0 +1,24 @@
+.template{
+    font-family: "Montserrat", sans-serif;
+    margin: 6px auto;
+    background-image: linear-gradient(90deg, #91CBAB 0%, #91CBDB 100%);
+    /* background-color: #0099ff; */
+    color: white;
+    width: 75%;
+    padding:1%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.template h3{
+    margin: 2px;
+    font-weight: 400;
+}
+.template p{
+    background-image: linear-gradient(90deg, #91CBAB 0%, #91CBDB 100%);
+    /* background-color: #06c9c580; */
+    color: black;
+}
+.buttonSet{
+    display: flex;
+    justify-content: space-evenly;
+}

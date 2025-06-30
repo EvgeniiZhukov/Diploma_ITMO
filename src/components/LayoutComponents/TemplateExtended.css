@@ -1,0 +1,15 @@
+h5{
+    font-weight: 300;
+    margin: 0px;
+}
+ul{
+    background-color: #a3a1a1;
+    border-radius: 5px;
+    margin: 5px;
+}
+input{
+    border-radius: 4px;
+}
+li:last-child input {
+    margin-bottom : 6px;
+}
