@@ -1,13 +1,22 @@
 import Template from './Template';
-import React, { useState } from 'react';
-function DeviceTemplates(json) {
-    console.log("Device template:", json.hideFiles);
-    console.log(json.file);
-    return <div id = "deviceTemplates" className="column">
-        {json.file? (json.file.map(item => 
-            <Template json = {item} key = {item["master>partNumber"]} hideFiles={json.hideFiles}
-        />)) : ("")}
-    </div>
-};
+
+function DeviceTemplates({ file, onShowChildren }) {
+    if (!file || !Array.isArray(file)) {
+        return <div className="column">Нет устройств</div>;
+    }
+
+    return (
+        <div id="deviceTemplates" className="column">
+            {file.map(item => (
+                <Template 
+                    json={item}
+                    key={item["master>partNumber"]}
+                    onShowChildren={onShowChildren}
+                    showChildren={true} // Явно включаем кнопку
+                />
+            ))}
+        </div>
+    );
+}
 
 export default DeviceTemplates;

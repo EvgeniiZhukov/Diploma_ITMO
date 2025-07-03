@@ -1,0 +1,12 @@
+
+.line {
+  background-color: white;
+  white-space: pre-wrap; 
+  display: block; 
+}
+.item {
+  color: purple;
+}
+.attribute {
+  color: blue;
+}

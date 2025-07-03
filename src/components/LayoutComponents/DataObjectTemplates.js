@@ -1,11 +1,21 @@
-// import React, { useState } from 'react';
-import Template from './Template.js';
+import Template from './Template';
+function DataObjectTemplates({ file, onShowChildren }) {
+    if (!file || !Array.isArray(file)) {
+        return <div className="column">Нет данных объектов</div>;
+    }
 
-function DataObjectTemplates(json) {
-    // const [product, setProduct] = useState([]);
-    return <div id = "dataObjectTemplates" className="column">
-            {json.file? (json.file.map(item =><Template json ={item} key ={ item["master>partNumber"]}/>)) : ("")}
-    </div>
-};
+    return (
+        <div id="dataObjectTemplates" className="column">
+            {file.map(item => (
+                <Template 
+                    json={item}
+                    key={item["master>partNumber"]}
+                    onShowChildren={onShowChildren}
+                    showChildren={true} 
+                />
+            ))}
+        </div>
+    );
+}
 
 export default DataObjectTemplates;
